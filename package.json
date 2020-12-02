@@ -1,0 +1,19 @@
+{
+  "name": "jam-comments-utilities",
+  "version": "0.0.1",
+  "description": "Various JavaScript utilities for JamComments.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prettify": "prettier ./**/*.{js,md} --write"
+  },
+  "keywords": [],
+  "author": "Alex MacArthur",
+  "license": "ISC",
+  "dependencies": {
+    "graphql-quest": "^1.0.2",
+    "isomorphic-fetch": "^3.0.0"
+  },
+  "devDependencies": {
+    "prettier": "^2.2.1"
+  }
+}
