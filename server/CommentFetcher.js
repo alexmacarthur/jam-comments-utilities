@@ -1,7 +1,7 @@
 require("isomorphic-fetch");
 const { QuestClient } = require("graphql-quest");
 
-const SERVICE_ENDPOINT = "http://localhost:4000";
+const SERVICE_ENDPOINT = "https://service.jamcomments.com";
 const PER_PAGE = 50;
 const COMMENTS_QUERY = `
   query Comments($domain: String!, $status: String, $skip: Int, $perPage: Int){

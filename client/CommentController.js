@@ -15,7 +15,7 @@ export default function CommentController(shell) {
     '[data-jam-comments-component="message"]'
   );
   const client = new QuestClient({
-    endpoint: "http://localhost:4000/graphql",
+    endpoint: "https://service.jamcomments.com/graphql",
     headers: {
       "x-api-key": "JAM_COMMENTS_API_KEY",
     },
