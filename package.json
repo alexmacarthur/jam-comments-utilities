@@ -2,7 +2,15 @@
   "name": "jam-comments-utilities",
   "version": "0.0.1",
   "description": "Various JavaScript utilities for JamComments.",
+  "main": "dist/index.js",
+  "files": [
+    "client/",
+    "server/",
+    "dist/"
+  ],
   "scripts": {
+    "watch": "parcel watch client/index.js -d dist/index.js",
+    "build": "parcel build client/index.js -d dist/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prettify": "prettier ./**/*.{js,md} --write"
   },
@@ -11,7 +19,8 @@
   "license": "ISC",
   "dependencies": {
     "graphql-quest": "^1.0.2",
-    "isomorphic-fetch": "^3.0.0"
+    "isomorphic-fetch": "^3.0.0",
+    "parcel": "^1.12.4"
   },
   "devDependencies": {
     "prettier": "^2.2.1"
