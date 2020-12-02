@@ -1,0 +1,26 @@
+name: Publish
+
+on:
+  push:
+    branches: [master]
+
+env:
+  NODE_AUTH_TOKEN: ${{secrets.NODE_AUTH_TOKEN}}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 14
+          registry-url: https://registry.npmjs.org/
+      - uses: fregante/setup-git-user@v1
+      - run: npm install
+      - run: npm run build
+      - run: npm publish --access public
+      - run: |
+          PACKAGE_VERSION=$(npm show ./ version)
+          git tag -a v$PACKAGE_VERSION -m "Create release v$PACKAGE_VERSION."
+          git push --tags
