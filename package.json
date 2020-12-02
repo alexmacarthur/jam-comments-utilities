@@ -16,6 +16,7 @@
   },
   "keywords": [],
   "author": "Alex MacArthur <alex@macarthur.me> (https://macarthur.me)",
+  "homepage": "https://jamcomments.com",
   "license": "GPL-2.0",
   "dependencies": {
     "graphql-quest": "^1.0.2",
