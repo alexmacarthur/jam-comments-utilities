@@ -15,8 +15,8 @@
     "prettify": "prettier ./**/*.{js,md} --write"
   },
   "keywords": [],
-  "author": "Alex MacArthur",
-  "license": "ISC",
+  "author": "Alex MacArthur <alex@macarthur.me> (https://macarthur.me)",
+  "license": "GPL-2.0",
   "dependencies": {
     "graphql-quest": "^1.0.2",
     "isomorphic-fetch": "^3.0.0",

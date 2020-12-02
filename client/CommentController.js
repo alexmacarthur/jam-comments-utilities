@@ -89,7 +89,7 @@ export default function CommentController(shell) {
     const number = parseInt(commentCount.textContent);
 
     commentCount.textContent = number + 1;
-  }
+  };
 
   /**
    * Hide the loading SVG.
