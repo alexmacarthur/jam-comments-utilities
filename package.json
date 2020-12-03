@@ -1,11 +1,12 @@
 {
   "name": "jam-comments-utilities",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Various JavaScript utilities for JamComments.",
   "main": "dist/index.js",
   "files": [
     "client/",
     "server/",
+    "shared/",
     "dist/"
   ],
   "scripts": {
@@ -19,6 +20,7 @@
   "homepage": "https://jamcomments.com",
   "license": "GPL-2.0",
   "dependencies": {
+    "chalk": "^4.1.0",
     "graphql-quest": "^1.0.2",
     "isomorphic-fetch": "^3.0.0",
     "parcel": "^1.12.4"

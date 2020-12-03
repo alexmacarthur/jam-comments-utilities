@@ -1,7 +1,7 @@
 require("isomorphic-fetch");
+const { getServiceEndpoint, log } = require("../shared");
 const { QuestClient } = require("graphql-quest");
 
-const SERVICE_ENDPOINT = "https://service.jamcomments.com";
 const PER_PAGE = 50;
 const COMMENTS_QUERY = `
   query Comments($domain: String!, $status: String, $skip: Int, $perPage: Int){
@@ -23,8 +23,9 @@ const COMMENTS_QUERY = `
 class CommentFetcher {
   constructor({ domain, apiKey }) {
     this.domain = domain;
+
     this.client = QuestClient({
-      endpoint: `${SERVICE_ENDPOINT}/graphql`,
+      endpoint: `${getServiceEndpoint()}/graphql`,
       method: "GET",
       headers: {
         "x-api-key": apiKey,
@@ -51,7 +52,7 @@ class CommentFetcher {
       throw new Error(errors[0].message);
     }
 
-    console.log(`Fetched a batch of ${items.length} comments.`);
+    log(`Fetched a batch of ${items.length} comments.`);
 
     return {
       comments: items,
